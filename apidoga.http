@@ -1,0 +1,45 @@
+@apidoga_HostAddress = http://localhost:5248
+
+GET {{apidoga_HostAddress}}/getall
+Accept: application/json
+
+###
+GET {{apidoga_HostAddress}}/getone/1
+Accept: application/json
+
+###
+POST {{apidoga_HostAddress}}/new-order
+Content-Type: application/json
+Accept: application/json
+
+{
+    "productName": "virag",
+    "productType": 0,
+    "quantity": 3,
+    "price": 890.00,
+    "created": "2026-02-02T03:00:00"
+ }
+
+###
+PUT {{apidoga_HostAddress}}/edit-order/102
+Content-Type: application/json
+Accept: application/json
+
+{
+    "productName": "virag_edited",
+    "productType": 1,
+    "quantity": 2,
+    "price": 899.00,
+    "created": "2026-03-02T03:00:00"
+ }
+
+###
+DELETE {{apidoga_HostAddress}}/delete/1
+Accept: application/json
+
+###
+
+GET {{apidoga_HostAddress}}/most-sold
+Accept: application/json
+
+###
